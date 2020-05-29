@@ -3,10 +3,9 @@ using System.Threading;
 
 namespace SingletonPattern
 {
-    class Program
+    internal class Program
     {
-
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             //WeatherForecast weather = WeatherForecast.GetInstance();
             //Console.WriteLine(weather.Date);
