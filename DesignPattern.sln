@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingletonPattern", "SingletonPattern\SingletonPattern.csproj", "{8506D868-B6A3-4BA7-9EDB-EF6F7FC5713F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonPattern", "SingletonPattern\SingletonPattern.csproj", "{8506D868-B6A3-4BA7-9EDB-EF6F7FC5713F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "创建型", "创建型", "{A14859F7-D36B-4583-91B0-5E6AA5264525}"
 	ProjectSection(SolutionItems) = preProject
@@ -14,7 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "结构型", "结构型", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "行为型", "行为型", "{838F6AFF-2F53-45B5-97BB-33AB262D7056}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{D16E9345-3237-4780-9949-87596BBDB102}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryPattern", "FactoryPattern\FactoryPattern.csproj", "{D16E9345-3237-4780-9949-87596BBDB102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserverPattern", "ObserverPattern\ObserverPattern.csproj", "{B4F1F6A4-3F81-404E-8396-F764E1B22284}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{D16E9345-3237-4780-9949-87596BBDB102}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D16E9345-3237-4780-9949-87596BBDB102}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D16E9345-3237-4780-9949-87596BBDB102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4F1F6A4-3F81-404E-8396-F764E1B22284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4F1F6A4-3F81-404E-8396-F764E1B22284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4F1F6A4-3F81-404E-8396-F764E1B22284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4F1F6A4-3F81-404E-8396-F764E1B22284}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{8506D868-B6A3-4BA7-9EDB-EF6F7FC5713F} = {A14859F7-D36B-4583-91B0-5E6AA5264525}
 		{D16E9345-3237-4780-9949-87596BBDB102} = {A14859F7-D36B-4583-91B0-5E6AA5264525}
+		{B4F1F6A4-3F81-404E-8396-F764E1B22284} = {838F6AFF-2F53-45B5-97BB-33AB262D7056}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A07DC6C4-B041-4C3D-BC1B-647B190995C4}
