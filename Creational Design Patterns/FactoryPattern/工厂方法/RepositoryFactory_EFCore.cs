@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FactoryPattern
+﻿namespace FactoryPattern
 {
     /// <summary>
     /// 2.1、EFCore 的仓储工厂
