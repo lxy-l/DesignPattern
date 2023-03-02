@@ -9,26 +9,29 @@ namespace FactoryPattern
     {
         private static void Main(string[] args)
         {
-            //Repository sugar = RepositorySimpleFactory.GetRepository("sugar");
-            //sugar.GetData();
+            #region 简单工厂
+            Repository sugar = RepositorySimpleFactory.GetRepository("sugar");
+            sugar.GetData();
 
-            //Repository efcore = RepositorySimpleFactory.GetRepository("efcore");
-            //efcore.GetData();
+            Repository efcore = RepositorySimpleFactory.GetRepository("efcore");
+            efcore.GetData();
+            #endregion
 
+            #region 工厂方法
+            // 初始化创建Repository的两个仓储工厂
+            RepositoryFactory efcoreRepositoryFactory = new RepositoryFactory_EFCore();
+            RepositoryFactory sugarRepositoryFactory = new RepositoryFactory_SqlSugar();
 
-            //// 初始化创建Repository的两个仓储工厂
-            //RepositoryFactory efcoreRepositoryFactory = new RepositoryFactory_EFCore();
-            //RepositoryFactory sugarRepositoryFactory = new RepositoryFactory_SqlSugar();
+            // 生产efcore仓储的实例
+            var efcoreRepository = efcoreRepositoryFactory.CreateRepository();
+            efcoreRepository.GetData();
 
-            //// 生产efcore仓储的实例
-            //var efcoreRepository = efcoreRepositoryFactory.CreateRepository();
-            //efcoreRepository.GetData();
+            //生产sugar仓储的实体
+            var sugarRepository = sugarRepositoryFactory.CreateRepository();
+            sugarRepository.GetData();
+            #endregion
 
-            ////生产sugar仓储的实体
-            //var sugarRepository = sugarRepositoryFactory.CreateRepository();
-            //sugarRepository.GetData();
-
-
+            #region 抽象工厂
             // 实例化工厂，这里用来生产 efcore 这一系列的 产品
             AbstractFactory efcoreFactory = new EFCoreRepositoryFactory();
             efcoreFactory.UserRepository().Add();
@@ -41,7 +44,7 @@ namespace FactoryPattern
             sugarFactory.UserRepository().Add();
             sugarFactory.RoleRepository().Delete();
             sugarFactory.PermissionRepository().Query();
-
+            #endregion
         }
     }
 }
