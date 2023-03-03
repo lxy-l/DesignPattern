@@ -16,11 +16,23 @@ namespace MediatorPattern
     {
         static void Main(string[] args)
         {
-            User user1 = new User("狗");
-            User user2 = new User("猫");
+            //User user1 = new User("狗");
+            //User user2 = new User("猫");
 
-            user1.SendMsg("HB");
-            user2.SendMsg("HH");
+            //user1.SendMsg("HB");
+            //user2.SendMsg("HH");
+
+            Component1 component1 = new Component1();
+            Component2 component2 = new Component2();
+            new ConcreteMediator(component1, component2);
+
+            Console.WriteLine("Client triggets operation A.");
+            component1.DoA();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Client triggers operation D.");
+            component2.DoD();
         }
     }
 }
