@@ -8,7 +8,7 @@ namespace ProxyPattern
 {
     public class Proxy:ISubject
     {
-        private RealSubject _realSubject;
+        private readonly RealSubject _realSubject;
 
         public Proxy(RealSubject realSubject)
         {
@@ -21,15 +21,15 @@ namespace ProxyPattern
         // execution to the same method in a linked RealSubject object.
         public void Request()
         {
-            if (this.CheckAccess())
+            if (CheckAccess())
             {
                 this._realSubject.Request();
 
-                this.LogAccess();
+                LogAccess();
             }
         }
 
-        public bool CheckAccess()
+        public static bool CheckAccess()
         {
             // Some real checks should go here.
             Console.WriteLine("Proxy: Checking access prior to firing a real request.");
@@ -37,7 +37,7 @@ namespace ProxyPattern
             return true;
         }
 
-        public void LogAccess()
+        public static void LogAccess()
         {
             Console.WriteLine("Proxy: Logging the time of request.");
         }

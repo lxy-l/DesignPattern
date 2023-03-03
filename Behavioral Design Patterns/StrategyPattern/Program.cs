@@ -17,7 +17,7 @@ namespace StrategyPattern
 
     public class Program
     {
-        private static List<Context> algs = new List<Context>();
+        private static readonly List<Context> algs = new List<Context>();
 
         static Program()
         {
