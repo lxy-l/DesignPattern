@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonPattern", "Creatio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorPattern", "Structural Design Patterns\DecoratorPattern\DecoratorPattern.csproj", "{58AEFA5F-864D-44A5-B111-A63474871A8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderPattern", "Creational Design Patterns\BuilderPattern\BuilderPattern.csproj", "{C2A71749-CAD6-4DCC-A807-EBBE1372B20C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern", "Creational Design Patterns\PrototypePattern\PrototypePattern.csproj", "{4BBF1CC0-D108-4292-A7F7-911BC48A3CFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{58AEFA5F-864D-44A5-B111-A63474871A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58AEFA5F-864D-44A5-B111-A63474871A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58AEFA5F-864D-44A5-B111-A63474871A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A71749-CAD6-4DCC-A807-EBBE1372B20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A71749-CAD6-4DCC-A807-EBBE1372B20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A71749-CAD6-4DCC-A807-EBBE1372B20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A71749-CAD6-4DCC-A807-EBBE1372B20C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BBF1CC0-D108-4292-A7F7-911BC48A3CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BBF1CC0-D108-4292-A7F7-911BC48A3CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BBF1CC0-D108-4292-A7F7-911BC48A3CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BBF1CC0-D108-4292-A7F7-911BC48A3CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +74,8 @@ Global
 		{0034419D-FDED-433F-9231-3726126E79C0} = {0ADB8158-77D4-4070-96F2-A84CCB17CC16}
 		{F5A93CBE-5842-4C5D-9FCF-D49A8E58EE84} = {0ADB8158-77D4-4070-96F2-A84CCB17CC16}
 		{58AEFA5F-864D-44A5-B111-A63474871A8A} = {40B7CB1F-9DCC-401C-96C7-AEAFF25D21CC}
+		{C2A71749-CAD6-4DCC-A807-EBBE1372B20C} = {0ADB8158-77D4-4070-96F2-A84CCB17CC16}
+		{4BBF1CC0-D108-4292-A7F7-911BC48A3CFF} = {0ADB8158-77D4-4070-96F2-A84CCB17CC16}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A07DC6C4-B041-4C3D-BC1B-647B190995C4}
