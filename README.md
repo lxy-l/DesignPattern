@@ -1,6 +1,5 @@
 # DesignPattern
->设计模式
->https://www.runoob.com/design-pattern/design-pattern-intro.html
+>*[设计模式学习文档](https://www.runoob.com/design-pattern/design-pattern-intro.html)*
 ---
 
 
