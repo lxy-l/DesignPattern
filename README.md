@@ -1,8 +1,7 @@
 # DesignPattern
 >*[设计模式学习文档](https://www.runoob.com/design-pattern/design-pattern-intro.html)*
 ---
-
-
+  
 ## 设计模式六大原则（SOLID）
 >用抽象构建框架，用实现扩展细节，具体到每一条设计原则
 1. 开闭原则
