@@ -1,36 +1,30 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
-namespace IteratorPattern
+namespace IteratorPattern;
+
+public class WordsCollection:IteratorAggregate
 {
-    public class WordsCollection:IteratorAggregate
+    List<string> _collection = new();
+
+    bool _direction = false;
+
+    public void ReverseDirection()
     {
-        List<string> _collection = new List<string>();
+        _direction = !_direction;
+    }
 
-        bool _direction = false;
+    public List<string> getItems()
+    {
+        return _collection;
+    }
 
-        public void ReverseDirection()
-        {
-            _direction = !_direction;
-        }
+    public void AddItem(string item)
+    {
+        this._collection.Add(item);
+    }
 
-        public List<string> getItems()
-        {
-            return _collection;
-        }
-
-        public void AddItem(string item)
-        {
-            this._collection.Add(item);
-        }
-
-        public override IEnumerator GetEnumerator()
-        {
-            return new AlphabeticalOrderIterator(this, _direction);
-        }
+    public override IEnumerator GetEnumerator()
+    {
+        return new AlphabeticalOrderIterator(this, _direction);
     }
 }

@@ -1,21 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace CompositePattern;
 
-namespace CompositePattern
+public class Leaf: Component
 {
-    public class Leaf: Component
+    public override string Operation()
     {
-        public override string Operation()
-        {
-            return "Leaf";
-        }
+        return "Leaf";
+    }
 
-        public override bool IsComposite()
-        {
-            return false;
-        }
+    public override bool IsComposite()
+    {
+        return false;
     }
 }

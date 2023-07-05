@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ChainofResponsibilityPattern;
 
-namespace ChainofResponsibilityPattern
+public interface IHandler
 {
-    public interface IHandler
-    {
-        IHandler SetNext(IHandler handler);
+    IHandler SetNext(IHandler handler);
 
-        object Handle(object request);
-    }
+    object Handle(object request);
 }

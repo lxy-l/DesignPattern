@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace StrategyPattern
+namespace StrategyPattern;
+
+public class One : Strategy
 {
-    public class One : Strategy
+    public void Method(string option)
     {
-        public void Method(string option)
-        {
-            Console.WriteLine("执行策略1");
-        }
+        Console.WriteLine("执行策略1");
     }
 }

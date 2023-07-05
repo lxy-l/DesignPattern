@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DecoratorPattern
+namespace DecoratorPattern;
+
+public class BenzCar : Car
 {
-    public class BenzCar : Car
+    public void Run()
     {
-        public void Run()
-        {
-            Console.WriteLine("奔驰开车了");
-        }
+        Console.WriteLine("奔驰开车了");
     }
 }

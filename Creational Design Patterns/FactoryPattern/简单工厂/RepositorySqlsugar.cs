@@ -1,17 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace FactoryPattern
+namespace FactoryPattern;
+
+/// <summary>
+/// 定义一个 Sqlsugar 仓储
+/// </summary>
+public class RepositorySqlsugar : Repository
 {
-    /// <summary>
-    /// 定义一个 Sqlsugar 仓储
-    /// </summary>
-    public class RepositorySqlsugar : Repository
+    public override void GetData()
     {
-        public override void GetData()
-        {
-            Console.WriteLine("获取 Sqlsugar 全部数据！");
-        }
+        Console.WriteLine("获取 Sqlsugar 全部数据！");
     }
 }

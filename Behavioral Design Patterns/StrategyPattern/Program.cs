@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace StrategyPattern
-{
-    /**
+namespace StrategyPattern;
+
+/**
      * 
      * 策略模式：
      *      1.定义一系列的算法,把它们一个个封装起来, 并且使它们可相互替换。
@@ -14,34 +13,32 @@ namespace StrategyPattern
      *      6、如果一个对象有很多的行为，如果不用恰当的模式，这些行为就只好使用多重的条件选择语句来实现。
      * 
      * **/
+public class Program
+{
+    private static readonly List<Context> algs = new();
 
-    public class Program
+    static Program()
     {
-        private static readonly List<Context> algs = new List<Context>();
+        algs.Add(new Context("1", new One()));
+        algs.Add(new Context("2", new Two()));
+    }
+    static void Main(string[] args)
+    {
+        ShareOptions("1");
+    }
 
-        static Program()
-        {
-            algs.Add(new Context("1", new One()));
-            algs.Add(new Context("2", new Two()));
-        }
-        static void Main(string[] args)
-        {
-            ShareOptions("1");
-        }
-
-        public static void ShareOptions(string type)
-        {
+    public static void ShareOptions(string type)
+    {
             
-            Strategy dealStrategy = null;
-            foreach (Context deal in algs)
+        Strategy dealStrategy = null;
+        foreach (Context deal in algs)
+        {
+            if (deal.Options(type))
             {
-                if (deal.Options(type))
-                {
-                    dealStrategy = deal.GetStrategy();
-                    break;
-                }
+                dealStrategy = deal.GetStrategy();
+                break;
             }
-            dealStrategy.Method(type);
         }
+        dealStrategy.Method(type);
     }
 }

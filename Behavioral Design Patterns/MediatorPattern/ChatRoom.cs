@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace MediatorPattern
+namespace MediatorPattern;
+
+public class ChatRoom
 {
-    public class ChatRoom
+    public static void ShowMsg(User user, string msg)
     {
-        public static void ShowMsg(User user, string msg)
-        {
-            Console.WriteLine("[" + user.Name + "]:" + msg);
-        }
+        Console.WriteLine("[" + user.Name + "]:" + msg);
     }
 }

@@ -1,13 +1,11 @@
-﻿namespace PrototypePattern
+﻿namespace PrototypePattern;
+
+public class IdInfo
 {
-    public class IdInfo
+    public int IdNumber;
+
+    public IdInfo(int idNumber)
     {
-        public int IdNumber;
-
-        public IdInfo(int idNumber)
-        {
-            this.IdNumber = idNumber;
-        }
+        this.IdNumber = idNumber;
     }
-
 }

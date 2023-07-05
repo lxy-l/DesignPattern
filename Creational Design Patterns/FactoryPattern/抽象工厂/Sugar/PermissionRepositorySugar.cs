@@ -1,27 +1,26 @@
 ﻿using FactoryPattern.抽象工厂.Core;
 
-namespace FactoryPattern.抽象工厂.Sugar
+namespace FactoryPattern.抽象工厂.Sugar;
+
+internal class PermissionRepositorySugar : PermissionRepository
 {
-    internal class PermissionRepositorySugar : PermissionRepository
+    public override void Add()
     {
-        public override void Add()
-        {
-            throw new System.NotImplementedException();
-        }
+        throw new System.NotImplementedException();
+    }
 
-        public override void Delete()
-        {
-            throw new System.NotImplementedException();
-        }
+    public override void Delete()
+    {
+        throw new System.NotImplementedException();
+    }
 
-        public override void Query()
-        {
-            throw new System.NotImplementedException();
-        }
+    public override void Query()
+    {
+        throw new System.NotImplementedException();
+    }
 
-        public override void Update()
-        {
-            throw new System.NotImplementedException();
-        }
+    public override void Update()
+    {
+        throw new System.NotImplementedException();
     }
 }

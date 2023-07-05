@@ -1,26 +1,25 @@
-﻿namespace BuilderPattern
+﻿namespace BuilderPattern;
+
+/// <summary>
+/// 产品
+/// </summary>
+public class Product
 {
-    /// <summary>
-    /// 产品
-    /// </summary>
-    public class Product
+    private List<object> list = new();
+
+    public void Add(string part)
     {
-        private List<object> list = new List<object>();
+        list.Add(part);
+    }
 
-        public void Add(string part)
+    public string ListParts()
+    {
+        string str = string.Empty;
+        for (int i = 0; i < list.Count; i++)
         {
-            list.Add(part);
+            str += list[i] + ",";
         }
-
-        public string ListParts()
-        {
-            string str = string.Empty;
-            for (int i = 0; i < list.Count; i++)
-            {
-                str += list[i] + ",";
-            }
-            str = str.Remove(str.Length - 2);
-            return $"Product parts:{str}\n";
-        }
+        str = str.Remove(str.Length - 2);
+        return $"Product parts:{str}\n";
     }
 }

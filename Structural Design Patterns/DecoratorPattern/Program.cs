@@ -1,9 +1,6 @@
-﻿using System;
+﻿namespace DecoratorPattern;
 
-namespace DecoratorPattern
-{
-
-    /**
+/**
      * 
      * 装饰器模式:
      *      1.动态地给一个对象添加一些额外的职责。就增加功能来说，装饰器模式相比生成子类更为灵活。
@@ -12,20 +9,19 @@ namespace DecoratorPattern
      *      4.扩展一个类的功能、动态增加功能，动态撤销。
      * 
      * **/
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Car benz = new BenzCar();
-            Car bmw = new BMWCar();
+        Car benz = new BenzCar();
+        Car bmw = new BMWCar();
 
-            CarDecorator autorun = new AutoCarDecorator(benz);
-            CarDecorator flycar = new FlyCarDecorator(bmw);
+        CarDecorator autorun = new AutoCarDecorator(benz);
+        CarDecorator flycar = new FlyCarDecorator(bmw);
 
-            autorun.Run();
-            flycar.Run();
+        autorun.Run();
+        flycar.Run();
 
 
-        }
     }
 }

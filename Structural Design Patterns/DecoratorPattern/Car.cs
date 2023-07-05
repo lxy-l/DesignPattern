@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace DecoratorPattern;
 
-namespace DecoratorPattern
+public interface Car
 {
-    public interface Car
-    {
-        public void Run();
-    }
+    public void Run();
 }

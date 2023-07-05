@@ -1,8 +1,6 @@
-﻿using System;
+﻿namespace ObserverPattern;
 
-namespace ObserverPattern
-{
-    /**
+/**
      * 
      * 观察者模式:
      *          1.定义对象间的一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并被自动更新。
@@ -13,16 +11,15 @@ namespace ObserverPattern
                   需要在系统中创建一个触发链，A对象的行为将影响B对象，B对象的行为将影响C对象……，可以使用观察者模式创建一种链式触发机制。
      *
      ***/
-    class Program
+class Program
+{
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Dog dog = new Dog("小狗");
-            new People("一号",dog);
-            new Monitor("二号",dog);
-            dog.Mating();
-            dog.Move();
-            dog.Woof();
-        }
+        Dog dog = new Dog("小狗");
+        new People("一号",dog);
+        new Monitor("二号",dog);
+        dog.Mating();
+        dog.Move();
+        dog.Woof();
     }
 }

@@ -1,35 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace ChainofResponsibilityPattern;
 
-namespace ChainofResponsibilityPattern
+public abstract class AbstractHandler : IHandler
 {
-    public abstract class AbstractHandler : IHandler
+    private IHandler _nextHandler;
+
+    public IHandler SetNext(IHandler handler)
     {
-        private IHandler _nextHandler;
+        this._nextHandler = handler;
 
-        public IHandler SetNext(IHandler handler)
+        // Returning a handler from here will let us link handlers in a
+        // convenient way like this:
+        // monkey.SetNext(squirrel).SetNext(dog);
+        return handler;
+    }
+
+    public virtual object Handle(object request)
+    {
+        if (this._nextHandler != null)
         {
-            this._nextHandler = handler;
-
-            // Returning a handler from here will let us link handlers in a
-            // convenient way like this:
-            // monkey.SetNext(squirrel).SetNext(dog);
-            return handler;
+            return this._nextHandler.Handle(request);
         }
-
-        public virtual object Handle(object request)
+        else
         {
-            if (this._nextHandler != null)
-            {
-                return this._nextHandler.Handle(request);
-            }
-            else
-            {
-                return null;
-            }
+            return null;
         }
     }
 }

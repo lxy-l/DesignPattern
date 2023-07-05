@@ -1,7 +1,6 @@
-﻿namespace AdapterPattern
+﻿namespace AdapterPattern;
+
+public interface ITarget
 {
-    public interface ITarget
-    {
-        string GetRequest();
-    }
+    string GetRequest();
 }
